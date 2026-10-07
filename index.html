@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청양경로당 - 9월 나들이 안내</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Noto Sans KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        greenTheme: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f4fbf7;
+            word-break: keep-all;
+        }
+        .text-scale-large {
+            font-size: 115%;
+        }
+        .text-scale-xlarge {
+            font-size: 130%;
+        }
+        /* Touch feedback & accessible focus outlines */
+        button, a {
+            touch-action: manipulation;
+        }
+        button:focus, a:focus {
+            outline: 4px solid #15803d;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="text-slate-900 antialiased min-h-screen flex flex-col pb-24 transition-all duration-300" id="mainBody">
+
+    <!-- Top Accessibility Bar (Text size & Speech buttons) -->
+    <header class="bg-greenTheme-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-3xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-yellow-400 text-greenTheme-900 font-bold px-3 py-1 rounded-full text-base sm:text-lg shadow">
+                    🏡 청양경로당
+                </span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <!-- Voice Read Button -->
+                <button onclick="toggleSpeech()" id="speechBtn" class="bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-black px-3 py-2 rounded-xl text-base sm:text-lg flex items-center gap-1.5 shadow transition active:scale-95" aria-label="안내글 목소리로 듣기">
+                    <i class="fa-solid fa-volume-high text-xl"></i>
+                    <span id="speechText">소리로 듣기</span>
+                </button>
+                <!-- Font Size Controls -->
+                <div class="flex bg-greenTheme-800 rounded-xl p-1 border border-greenTheme-600">
+                    <button onclick="setFontSize('normal')" class="px-2.5 py-1 text-sm font-bold rounded-lg hover:bg-greenTheme-700 active:bg-greenTheme-600" title="기본 글자">보통</button>
+                    <button onclick="setFontSize('large')" class="px-2.5 py-1 text-base font-bold rounded-lg hover:bg-greenTheme-700 active:bg-greenTheme-600" title="큰 글자">크게</button>
+                    <button onclick="setFontSize('xlarge')" class="px-2.5 py-1 text-lg font-bold rounded-lg hover:bg-greenTheme-700 active:bg-greenTheme-600" title="아주 큰 글자">아주크게</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 w-full flex-grow pt-4">
+        
+        <!-- Main Title Card -->
+        <section class="bg-gradient-to-b from-greenTheme-800 to-greenTheme-700 text-white rounded-3xl p-6 sm:p-8 shadow-xl text-center border-4 border-greenTheme-600 mb-6">
+            <div class="inline-block bg-white text-greenTheme-800 font-extrabold text-lg sm:text-xl px-4 py-1.5 rounded-full mb-3 shadow">
+                🍂 가을 맞이 단풍 소풍
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight mb-3 text-yellow-300 drop-shadow">
+                9월 나들이 안내
+            </h1>
+            <p class="text-xl sm:text-2xl font-bold text-greenTheme-100 leading-snug">
+                어르신 여러분! 시원한 가을바람 쐬러 함께 떠나요!
+            </p>
+        </section>
+
+        <!-- Key Info Grid (Huge Fonts) -->
+        <div class="space-y-5">
+
+            <!-- 1. 날짜 (Date) -->
+            <div class="bg-white rounded-2xl p-6 border-4 border-greenTheme-600 shadow-md flex flex-col sm:flex-row items-start sm:items-center gap-4 hover:border-greenTheme-700 transition">
+                <div class="bg-greenTheme-100 p-4 rounded-2xl text-greenTheme-800 flex items-center justify-center min-w-[70px] min-h-[70px] shadow-inner">
+                    <i class="fa-solid fa-calendar-days text-4xl"></i>
+                </div>
+                <div class="flex-grow">
+                    <span class="text-greenTheme-700 font-extrabold text-xl sm:text-2xl block mb-1">
+                        📌 가는 날짜
+                    </span>
+                    <div class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight">
+                        2026년 9월 25일 <span class="text-greenTheme-700">(금요일)</span>
+                    </div>
+                    <div class="text-lg sm:text-2xl font-bold text-slate-700 mt-1">
+                        ⏰ <span class="bg-yellow-200 px-2 py-0.5 rounded-md text-slate-900">오전 9시까지</span> 경로당 앞으로 오세요!
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 장소 (Location) -->
+            <div class="bg-white rounded-2xl p-6 border-4 border-greenTheme-600 shadow-md flex flex-col sm:flex-row items-start sm:items-center gap-4 hover:border-greenTheme-700 transition">
+                <div class="bg-greenTheme-100 p-4 rounded-2xl text-greenTheme-800 flex items-center justify-center min-w-[70px] min-h-[70px] shadow-inner">
+                    <i class="fa-solid fa-map-location-dot text-4xl"></i>
+                </div>
+                <div class="flex-grow">
+                    <span class="text-greenTheme-700 font-extrabold text-xl sm:text-2xl block mb-1">
+                        📍 가는 장소
+                    </span>
+                    <div class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight">
+                        청양 출렁다리 (천장호)
+                    </div>
+                    <p class="text-lg sm:text-2xl font-bold text-slate-700 mt-1">
+                        🚌 대형 버스로 안전하게 모십니다. (차량 제공)
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. 준비물 (Things to Bring Checklist) -->
+            <div class="bg-white rounded-2xl p-6 border-4 border-greenTheme-600 shadow-md">
+                <div class="flex items-center gap-3 mb-4 border-b-2 border-greenTheme-100 pb-3">
+                    <div class="bg-greenTheme-100 p-3 rounded-2xl text-greenTheme-800">
+                        <i class="fa-solid fa-bag-shopping text-3xl sm:text-4xl"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900">
+                        🎒 챙겨오실 준비물
+                    </h2>
+                </div>
+                
+                <p class="text-lg sm:text-xl text-slate-600 font-bold mb-3">
+                    * 아래 항목을 손가락으로 누르면 체크하실 수 있습니다.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xl sm:text-2xl font-bold">
+                    <label class="flex items-center gap-3 p-3.5 bg-greenTheme-50 rounded-xl border-2 border-greenTheme-200 cursor-pointer active:bg-greenTheme-100">
+                        <input type="checkbox" class="w-7 h-7 accent-greenTheme-700 rounded">
+                        <span>👟 편한 운동화 착용</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3.5 bg-greenTheme-50 rounded-xl border-2 border-greenTheme-200 cursor-pointer active:bg-greenTheme-100">
+                        <input type="checkbox" class="w-7 h-7 accent-greenTheme-700 rounded">
+                        <span>👒 햇빛 가릴 모자</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3.5 bg-greenTheme-50 rounded-xl border-2 border-greenTheme-200 cursor-pointer active:bg-greenTheme-100">
+                        <input type="checkbox" class="w-7 h-7 accent-greenTheme-700 rounded">
+                        <span>💊 드시는 개인 약</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3.5 bg-greenTheme-50 rounded-xl border-2 border-greenTheme-200 cursor-pointer active:bg-greenTheme-100">
+                        <input type="checkbox" class="w-7 h-7 accent-greenTheme-700 rounded">
+                        <span>💧 마실 개인 물병</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 4. 연락처 (Contact Information) -->
+            <div class="bg-white rounded-2xl p-6 border-4 border-greenTheme-600 shadow-md">
+                <div class="flex items-center gap-3 mb-4 border-b-2 border-greenTheme-100 pb-3">
+                    <div class="bg-greenTheme-100 p-3 rounded-2xl text-greenTheme-800">
+                        <i class="fa-solid fa-phone-volume text-3xl sm:text-4xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900">
+                            📞 문의 및 신청 연락처
+                        </h2>
+                        <p class="text-base sm:text-lg text-greenTheme-800 font-bold">
+                            궁금하신 점은 눌러서 바로 전화하세요!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <!-- Contact 1 -->
+                    <a href="tel:010-1234-5678" class="flex flex-col sm:flex-row items-center justify-between p-4 bg-emerald-50 border-3 border-emerald-500 rounded-2xl shadow-sm hover:bg-emerald-100 transition active:scale-98">
+                        <div class="text-center sm:text-left mb-2 sm:mb-0">
+                            <span class="text-lg sm:text-xl font-bold text-slate-600 block">경로당 회장님</span>
+                            <span class="text-2xl sm:text-3xl font-black text-slate-900">강상회 회장님</span>
+                        </div>
+                        <div class="bg-greenTheme-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xl sm:text-2xl flex items-center gap-2 shadow">
+                            <i class="fa-solid fa-phone"></i>
+                            010-1234-5678
+                        </div>
+                    </a>
+
+                    <!-- Contact 2 -->
+                    <a href="tel:010-9876-5432" class="flex flex-col sm:flex-row items-center justify-between p-4 bg-emerald-50 border-3 border-emerald-500 rounded-2xl shadow-sm hover:bg-emerald-100 transition active:scale-98">
+                        <div class="text-center sm:text-left mb-2 sm:mb-0">
+                            <span class="text-lg sm:text-xl font-bold text-slate-600 block">총무님</span>
+                            <span class="text-2xl sm:text-3xl font-black text-slate-900">강순자 총무님</span>
+                        </div>
+                        <div class="bg-greenTheme-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xl sm:text-2xl flex items-center gap-2 shadow">
+                            <i class="fa-solid fa-phone"></i>
+                            010-9876-5432
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. 하루 일정표 (Daily Schedule) -->
+            <div class="bg-white rounded-2xl p-6 border-4 border-greenTheme-600 shadow-md">
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-4 pb-2 border-b-2 border-greenTheme-100 flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-greenTheme-700"></i>
+                    당일 일정 안내
+                </h2>
+
+                <ul class="space-y-3 text-lg sm:text-2xl font-bold text-slate-800">
+                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <span class="bg-greenTheme-700 text-white text-base sm:text-xl px-2.5 py-1 rounded-lg shrink-0">오전 09:00</span>
+                        <span>경로당 앞 모임 및 버스 탑승</span>
+                    </li>
+                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <span class="bg-greenTheme-700 text-white text-base sm:text-xl px-2.5 py-1 rounded-lg shrink-0">오전 10:30</span>
+                        <span>청양 출렁다리 도착 및 둘레길 산책</span>
+                    </li>
+                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <span class="bg-greenTheme-700 text-white text-base sm:text-xl px-2.5 py-1 rounded-lg shrink-0">오후 12:30</span>
+                        <span>맛있는 점심 식사 (영양 갈비탕)</span>
+                    </li>
+                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <span class="bg-greenTheme-700 text-white text-base sm:text-xl px-2.5 py-1 rounded-lg shrink-0">오후 02:00</span>
+                        <span>노래자랑 및 기념 사진 촬영</span>
+                    </li>
+                    <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <span class="bg-greenTheme-700 text-white text-base sm:text-xl px-2.5 py-1 rounded-lg shrink-0">오후 04:00</span>
+                        <span>경로당 도착 및 안심 귀가</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Friendly Notice Box -->
+            <div class="bg-yellow-50 border-4 border-yellow-400 p-5 rounded-2xl shadow-sm text-center">
+                <p class="text-xl sm:text-2xl font-black text-slate-900 mb-1">
+                    💡 회비 안내 및 참고사항
+                </p>
+                <p class="text-lg sm:text-xl text-slate-800 font-bold">
+                    점심 식사와 이동 버스는 무료 제공됩니다.<br>
+                    몸만 편안하게 오셔서 즐거운 시간 되세요!
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Floating Bottom Call Bar (Mobile Friendly) -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t-4 border-greenTheme-600 p-3 z-40 shadow-2xl">
+        <div class="max-w-3xl mx-auto flex gap-2">
+            <a href="tel:010-1234-5678" class="flex-1 bg-greenTheme-700 hover:bg-greenTheme-800 text-white text-center py-3.5 px-4 rounded-2xl text-xl sm:text-2xl font-black flex items-center justify-center gap-2 shadow-lg active:scale-95">
+                <i class="fa-solid fa-phone text-2xl"></i>
+                <span>회장님 전화걸기</span>
+            </a>
+            <button onclick="scrollToTop()" class="bg-slate-200 text-slate-800 px-4 py-3.5 rounded-2xl font-bold text-lg flex items-center justify-center active:scale-95" aria-label="맨 위로">
+                ▲ 위로
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts for TTS and Font Resizing -->
+    <script>
+        // Adjust Font Size Function
+        function setFontSize(size) {
+            const body = document.getElementById('mainBody');
+            body.classList.remove('text-scale-large', 'text-scale-xlarge');
+            
+            if (size === 'large') {
+                body.classList.add('text-scale-large');
+            } else if (size === 'xlarge') {
+                body.classList.add('text-scale-xlarge');
+            }
+        }
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Text To Speech (TTS) Reader
+        let isSpeaking = false;
+        let speechUtterance = null;
+
+        function toggleSpeech() {
+            const btnText = document.getElementById('speechText');
+            const btn = document.getElementById('speechBtn');
+
+            if ('speechSynthesis' in window) {
+                if (isSpeaking) {
+                    window.speechSynthesis.cancel();
+                    isSpeaking = false;
+                    btnText.innerText = "소리로 듣기";
+                    btn.classList.remove('bg-red-500', 'text-white');
+                    btn.classList.add('bg-yellow-400', 'text-slate-900');
+                } else {
+                    const announcementText = `
+                        청양경로당 9월 나들이 안내입니다.
+                        가는 날짜는 2026년 9월 25일 금요일 오전 9시입니다. 경로당 앞으로 오시면 됩니다.
+                        가는 장소는 청양 출렁다리입니다. 차량이 제공됩니다.
+                        준비물은 편한 운동화, 햇빛 모자, 드시는 약, 물병입니다.
+                        문의사항은 강상회 회장님 전화번호 공일공 일이삼사 오육칠팔로 연락주세요.
+                    `;
+
+                    speechUtterance = new SpeechSynthesisUtterance(announcementText);
+                    speechUtterance.lang = 'ko-KR';
+                    speechUtterance.rate = 0.85; // Speak slightly slower for elderly listeners
+
+                    speechUtterance.onend = function() {
+                        isSpeaking = false;
+                        btnText.innerText = "소리로 듣기";
+                        btn.classList.remove('bg-red-500', 'text-white');
+                        btn.classList.add('bg-yellow-400', 'text-slate-900');
+                    };
+
+                    speechUtterance.onerror = function() {
+                        isSpeaking = false;
+                        btnText.innerText = "소리로 듣기";
+                        btn.classList.remove('bg-red-500', 'text-white');
+                        btn.classList.add('bg-yellow-400', 'text-slate-900');
+                    };
+
+                    window.speechSynthesis.speak(speechUtterance);
+                    isSpeaking = true;
+                    btnText.innerText = "멈추기 🛑";
+                    btn.classList.remove('bg-yellow-400', 'text-slate-900');
+                    btn.classList.add('bg-red-500', 'text-white');
+                }
+            } else {
+                alert("이 브라우저에서는 음성 읽기 기능을 지원하지 않습니다.");
+            }
+        }
+    </script>
+</body>
+</html>
